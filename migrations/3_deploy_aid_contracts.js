@@ -43,7 +43,7 @@ module.exports = async function (deployer, network, accounts) {
   await deployer.link(Eidas, AlastriaIdentityIssuer);
   await deployer.link(Eidas, AlastriaIdentityManager);
 
-  const serviceProvider = await AlastriaIdentityServiceProvider.new();
+  const serviceProvider = await AlastriaIdentityServiceProvider.new({ gas: 0x6691b7, gasPrice: 0x0 });
   console.log('serviceProvider deployed: ', serviceProvider.address);
   await saveAddresesInfo(
     serviceProvider.address,
@@ -51,7 +51,7 @@ module.exports = async function (deployer, network, accounts) {
     network
   );
 
-  const identityIssuer = await AlastriaIdentityIssuer.new();
+  const identityIssuer = await AlastriaIdentityIssuer.new({ gas: 0x6691b7, gasPrice: 0x0 });
   console.log('identityIssuer deployed: ', identityIssuer.address);
   await saveAddresesInfo(
     identityIssuer.address,
@@ -59,11 +59,12 @@ module.exports = async function (deployer, network, accounts) {
     network
   );
 
-  const credentialRegistry = await AlastriaCredentialRegistry.new();
+  const credentialRegistry = await AlastriaCredentialRegistry.new({ gas: 0x6691b7, gasPrice: 0x0 });
   const proxyCredentialRegistry = await Proxy.new(
     credentialRegistry.address,
     config.adminAccount,
-    []
+    [],
+    { gas: 0x6691b7, gasPrice: 0x0 }
   );
   console.log('credentialRegistry deployed: ', proxyCredentialRegistry.address);
   await saveAddresesInfo(
@@ -72,11 +73,12 @@ module.exports = async function (deployer, network, accounts) {
     network
   );
 
-  const presentationRegistry = await AlastriaPresentationRegistry.new();
+  const presentationRegistry = await AlastriaPresentationRegistry.new({ gas: 0x6691b7, gasPrice: 0x0 });
   const proxyPresentationRegistry = await Proxy.new(
     presentationRegistry.address,
     config.adminAccount,
-    []
+    [],
+    { gas: 0x6691b7, gasPrice: 0x0 }
   );
   console.log(
     'presentationRegistry deployed: ',
@@ -88,11 +90,12 @@ module.exports = async function (deployer, network, accounts) {
     network
   );
 
-  const publicKeyRegistry = await AlastriaPublicKeyRegistry.new();
+  const publicKeyRegistry = await AlastriaPublicKeyRegistry.new({ gas: 0x6691b7, gasPrice: 0x0 });
   const proxyPublicKeyRegistry = await Proxy.new(
     publicKeyRegistry.address,
     config.adminAccount,
-    []
+    [],
+    { gas: 0x6691b7, gasPrice: 0x0 }
   );
   console.log('publicKeyRegistry deployed: ', proxyPublicKeyRegistry.address);
   await saveAddresesInfo(
@@ -101,11 +104,12 @@ module.exports = async function (deployer, network, accounts) {
     network
   );
 
-  const identityManager = await AlastriaIdentityManager.new();
+  const identityManager = await AlastriaIdentityManager.new({ gas: 0x6691b7, gasPrice: 0x0 });
   const proxyIdentityManager = await Proxy.new(
     identityManager.address,
     config.adminAccount,
-    []
+    [],
+    { gas: 0x6691b7, gasPrice: 0x0 }
   );
   console.log('identityManager deployed: ', proxyIdentityManager.address);
   await saveAddresesInfo(
