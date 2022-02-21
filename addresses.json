@@ -1,10 +1,1 @@
-{
-    "Eidas": "0x75d6cc0126a4C398D8503aD2dFDD82e5626fce33",
-    "AlastriaServiceProvider": "0xC18B2bFe6c5739Ea321061873932EC2C11f3e371",
-    "AlastriaIdentityIssuer": "0x4BEd3d6CD31B5D0251De4F9702B39AC9564a83fd",
-    "AlastriaCredentialRegistry": "0x33CDa1389Ddc944A8082949Ff1c62c5F450d38d2",
-    "AlastriaPresentationRegistry": "0x337268ddd7C6403375531f130740004cEEf2808e",
-    "AlastriaPublicKeyRegistry": "0x1cd13Dc5161Bf2d5A83AAB4e7b66A6542D10Ab5B",
-    "AlastriaIdentityManager": "0xeafCAf8c3f9016B14ec65105677658f3D6Eb9079",
-    "AlastriaNameService": "0x34a7F888582D092cCA39d2Adb01CAdd65bF56902"
-}
+{"Eidas":"0x10ee6feb82ddce7BD046018E01a85D9C13a6153a","AlastriaServiceProvider":"0xCA0ed9E9fCe8A0382fCf649AA315872FF383aDf3","AlastriaIdentityIssuer":"0xa0E968a56602692C30cF1b5732bB7B508943d109","AlastriaCredentialRegistry":"0xb701b71cd63f90CccF9E0196EF7432aF07A4d5EC","AlastriaPresentationRegistry":"0xC7999660c59862b66618A68fBd8DB6cb16B38048","AlastriaPublicKeyRegistry":"0x5f32326f3aa3F84913aEfA3D8fee71f0A4fD0a11","AlastriaIdentityManager":"0x6aF4EC26ce07a60F035CC3A281702c4b95E798E2"}

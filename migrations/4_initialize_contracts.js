@@ -23,7 +23,7 @@ module.exports = async function (callback) {
       addresses[config.credential]
     );
     let tx = await credentialRegistry.initialize(
-      '0x0000000000000000000000000000000000000001'
+      '0x0000000000000000000000000000000000000001', { gas: 0x6691b7, gasPrice: 0x0 }
     );
     console.log(
       `Credential registry initilized in ${tx.receipt.transactionHash}`
@@ -33,7 +33,7 @@ module.exports = async function (callback) {
       addresses[config.presentation]
     );
     tx = await presentationRegistry.initialize(
-      '0x0000000000000000000000000000000000000001'
+      '0x0000000000000000000000000000000000000001', { gas: 0x6691b7, gasPrice: 0x0 }
     );
     console.log(
       `Presentation registry initilized in ${tx.receipt.transactionHash}`
@@ -43,7 +43,7 @@ module.exports = async function (callback) {
       addresses[config.publicKey]
     );
     tx = await publicKeyRegistry.initialize(
-      '0x0000000000000000000000000000000000000001'
+      '0x0000000000000000000000000000000000000001', { gas: 0x6691b7, gasPrice: 0x0 }
     );
     console.log(
       `Public key registry initilized in ${tx.receipt.transactionHash}`
@@ -56,7 +56,8 @@ module.exports = async function (callback) {
       addresses[config.credential],
       addresses[config.publicKey],
       addresses[config.presentation],
-      config.firstIdentityWallet
+      config.firstIdentityWallet,
+      { gas: 0x6691b7, gasPrice: 0x0 }
     );
     console.log(`Identity manager initilized in ${tx.receipt.transactionHash}`);
 
